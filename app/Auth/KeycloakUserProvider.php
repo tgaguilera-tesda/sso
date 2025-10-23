@@ -41,9 +41,9 @@ class KeycloakUserProvider implements UserProvider
         return true;
     }
     public function rehashPasswordIfRequired(\Illuminate\Contracts\Auth\Authenticatable $user, array $credentials, bool $force = false): void
-{
-    // Since Keycloak handles authentication externally,
-    // there’s no password rehashing needed here.
-}
+    {
+        // Since Keycloak handles authentication externally,
+        // there’s no password rehashing needed here.
+    }
 
 }

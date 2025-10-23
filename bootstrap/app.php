@@ -12,6 +12,9 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         //
+          $middleware->alias([
+             'keycloak.auth' => \App\Http\Middleware\RedirectIfKeycloakUnauthenticated::class,
+         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
